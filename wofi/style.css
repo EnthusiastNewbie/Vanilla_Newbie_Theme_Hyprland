@@ -1,0 +1,125 @@
+
+window {
+
+    margin: 0px;
+
+    background-color: rgba(0, 0, 0, 0.92); 
+
+    border-radius: 20px;
+
+    font-family: "JetBrains Mono", "Monospace";
+
+
+    /* BORDO NEON MAGENTA */
+
+    border: 8px solid #FA39FA;
+
+    box-shadow:
+
+        0 0 30px rgba(250, 57, 250, 0.4),            /* Glow esterno */
+
+        inset 0 0 15px rgba(250, 57, 250, 0.2);      /* Glow interno */
+
+}
+
+
+/* BARRA DI RICERCA */
+
+#input {
+
+    margin: 30px 50px;
+
+    padding: 15px 20px;
+
+    background-color: #000000;
+
+    border: 2px solid #00FFF7; 
+
+    border-radius: 10px;      
+
+    color: #00FFF7;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow: 0 0 15px rgba(0, 255, 247, 0.3);
+
+}
+
+
+#input:focus {
+
+    outline: none;
+
+    box-shadow: 0 0 25px rgba(0, 255, 247, 0.5);
+
+}
+
+
+/* CONTENITORE RISULTATI */
+
+#inner-box {
+
+    margin: 0px 50px 30px 50px;
+
+}
+
+
+/* LISTA DELLE APP */
+
+#entry {
+
+    margin: 8px 0px;
+
+    padding: 15px;
+
+    border-radius: 8px; 
+
+    background-color: transparent;
+
+}
+
+
+/* SELEZIONE: Barra Verticale Cyan */
+
+#entry:selected {
+
+    background-color: rgba(0, 255, 247, 0.2); /* Sfondo appena accennato */
+
+    border-left: 8px solid #00FFF7;          
+
+    border-radius: 2px 8px 8px 2px;
+
+}
+
+
+/* TESTO E ICONE */
+
+#text {
+
+    margin-left: 25px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+}
+
+
+#entry:selected #text {
+
+     color: #00FFF7;
+
+    font-weight: bold;
+
+}
+
+
+#img {
+
+    margin-right: 1px;
+
+    filter: drop-shadow(0 0 5px rgba(0, 255, 247, 0.3)); /* Glow sulle icone */
+
+} 

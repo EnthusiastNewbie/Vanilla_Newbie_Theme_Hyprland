@@ -104,6 +104,9 @@ Le app Qt  ignorano il tema GTK. Se vuoi forzarle a usare i nostri colori (altri
 
 
 ### 3. Schermata di Login (SDDM)
+
+![vanilla_Newbie sddm Preview](assets/sddm_preview.png)
+
 Questa parte richiede permessi di amministratore:
 1. Copia la cartella: 
 ```bash

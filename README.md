@@ -58,9 +58,18 @@ Per chi vuole tutto pronto in pochi secondi, ho creato uno script che sposta tut
 > [!WARNING]
 > Lo script di installazione **NON effettua backup automatici**. Assicurati di fare una copia dei tuoi file originali prima di procedere.
 
-1. Apri la cartella: cd Vanilla_Newbie_Theme_Hyprland
-2. Rendi eseguibile lo script: chmod +x install.sh
-3. Esegui: ./install.sh
+1. Apri la cartella:
+```bash
+cd Vanilla_Newbie_Theme_Hyprland
+```
+2. Rendi eseguibile lo script: 
+```bash
+chmod +x install.sh
+```
+3. Esegui:
+```bash
+./install.sh
+```
 
 ---
 
@@ -75,25 +84,36 @@ Comando: cp -r hypr waybar wofi fastfetch dunst alacritty ~/.config/
 **Wallpaper:** Copia la cartella 'Pictures' nella tua Home (~/Pictures).
 **IMPORTANTE:** Apri ~/.config/hypr/hyprpaper.conf e correggi il percorso dell'immagine sostituendo il mio nome utente con il tuo.
 
+
 ### 2.1 Tema delle Finestre (GTK)
 Copia la cartella 'Vanilla_Newbie' nel percorso dei temi del tuo utente:
 Comando: cp -r Vanilla_Newbie ~/.themes/
 (Nota: Se la cartella ~/.themes non esiste, creala prima!)
 
+
 ### 2.2. Coerenza App Qt (VLC, OBS, ecc.) 💡 TIP
-Le app Qt  ignorano il tema GTK. Se vuoi forzarle a usare i nostri colori (altrimenti puoi saltare questo passaggio):
-0. Installa i pacchetti qt5ct e qt6ct.
-1. Crea la cartella: `mkdir -p ~/.config/environment.d`
-2. Crea il file `qt.conf` al suo interno.
-3. Incolla questa riga: `QT_QPA_PLATFORMTHEME=qt5ct`
-4. I file per i colori delle app Qt si trovano in Vanilla_Newbie/kde/.
+Le app Qt  ignorano il tema GTK. Se vuoi forzarle a usare i nostri colori (altrimenti puoi saltare questo passaggio) :
+
+1. Installa i pacchetti qt5ct e qt6ct.
+2. Crea la cartella: `mkdir -p ~/.config/environment.d`
+3. Crea il file `qt.conf` al suo interno.
+4. Incolla questa riga: `QT_QPA_PLATFORMTHEME=qt5ct`
+5. I file per i colori delle app Qt si trovano in Vanilla_Newbie/kde/.
    Copia i file .conf delle cartelle qt5ct e qt6ct nei rispettivi percorsi in ~/.config/qt5ct/colors/ e ~/.config/qt6ct/colors/.
-5. Al riavvio, apri 'qt5ct' e 'qt6ct' per selezionare il tema .
+6. Al riavvio, apri 'qt5ct' e 'qt6ct' per selezionare il tema .
+
 
 ### 3. Schermata di Login (SDDM)
 Questa parte richiede permessi di amministratore:
-1. Copia la cartella: sudo cp -r Vanilla_Newbie_Theme_Sddm /usr/share/sddm/themes/
-2. Attiva il tema: Modifica il file /etc/sddm.conf cercando la sezione [Theme] e scrivendo: Current=Vanilla_Newbie_Theme_Sddm
+1. Copia la cartella: 
+```bash
+sudo cp -r Vanilla_Newbie_Theme_Sddm /usr/share/sddm/themes/
+```
+2. Attiva il tema: 
+Modifica il file /etc/sddm.conf cercando la sezione [Theme] e scrivendo:
+```bash
+Current=Vanilla_Newbie_Theme_Sddm
+```
 
 ### 4. Personalizzazione Firefox
 Nella cartella 'firefox' di questo repository troverai un file 'readme'. Aprilo per trovare il link diretto ai Mozilla Addons: lì ho caricato il tema con i colori ufficiali "Vanilla Newbie" per rendere il browser coerente con il resto del desktop.
@@ -116,7 +136,10 @@ Fastfetch è l'alternativa moderna e veloce a Neofetch.
 #### 5.2 Starship (Prompt Personalizzato)
 Starship è un prompt minimale, personalizzabile e velocissimo.
 
-1. Copia la configurazione: `cp starship/starship.toml ~/.config/`
+1. Copia la configurazione: 
+```bash
+cp starship/starship.toml ~/.config/
+```
 2. **Attivazione:** Aggiungi la seguente riga alla fine del tuo file `~/.bashrc` (o `~/.zshrc` se usi Zsh):
 
 ```bash
